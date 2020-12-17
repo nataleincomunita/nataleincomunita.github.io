@@ -7,44 +7,86 @@
 				margin: 0px;
 				padding: 0px;
 			}
+			html {
+				scroll-behavior: smooth;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="fb-root"></div>
 		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="ndWovRap"></script>
-		<div style="display:flex;align-items:center; background-color: #37560a; width: 100%; height: 50px; position: sticky; top: 0; border-bottom-style: solid; border-color: white; border-width: 2px;">
-			<span style="width: 20px;"></span>
-			<img onclick="apriMenu();" style="cursor: pointer;" src="icons8/menu-rounded-50.png">
-			<span style="width: 20px;"></span>
-			<p style="color: white; font-size: 30px;">Natale in Comune? Meglio in Comunità</p>
+		<div style="display:flex;align-items:center; background-color: #37560a; width: 100%; height: 70px; position: sticky; top: 0; border-bottom-style: solid; border-color: white; border-width: 2px;">
+			<figure style="text-align: center">
+				<a href="#mappa"><img style="cursor: pointer; width: 40px; height: 40px;" src="icons8/waypoint-map-50.png"></a>
+				<figcaption style="font-size: 16px; color: white;">Mappa</figcaption>
+			</figure>
+			<figure style="text-align: center">
+				<a href="#facebook"><img style="cursor: pointer; width: 40px; height: 40px;" src="icons8/instagram-50.png"></a>
+				<figcaption style="font-size: 16px; color: white;">Social</figcaption>
+			</figure>
+			<figure style="text-align: center">
+				<a href="#scrivici"><img style="cursor: pointer; width: 40px; height: 40px;" src="icons8/composing-mail-50.png"></a>
+				<figcaption style="font-size: 16px; color: white;">Scrivici</figcaption>
+			</figure>
 		</div>
-		<style>
-			.menu-show {
-				display: block !important;
-			}
-		</style>
-		<div id="menu" style="display: none; z-index: 20; background-color: #37560a; width: 220px; height: 100%; position: fixed; top: 0; left: 0;">
-			<div style="display:flex;align-items:center;">
-				<span style="width: 20px;"></span>
-				<img onclick="chiudiMenu();" style="cursor: pointer;" src="icons8/menu-rounded-50.png">
-			</div>
+		<div style="background: url('header_photo.jpg'); background-repeat: no-repat; background-size: cover; background-attachment: fixed; width: 100%; height: 250px; display:flex;align-items:top;">
+			<h1 style="text-shadow: 2px 3px 9px #FF0000; color: white; text-align: center; width: 100%;">Natale in comune? <br> Meglio in comunità! <br> <p style="color: white; font-size: 20px;" href="#mappa">Usa il menu sopra per spostarti</p></h1>
 		</div>
-		<canvas id="menu_bg" style="display: none; z-index: 10;background-color: rgba(0, 0, 0, 0.4); position: fixed; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
-		<div style="background: url('header_photo.jpg'); background-repeat: no-repat; background-size: cover; background-attachment: fixed; width: 100%; height: 60%; display:flex;align-items:flex-end;">
-			<canvas style="background: rgb(55,86,10); background: linear-gradient(0deg, rgba(55,86,10,1) 0%, rgba(0,0,0,0) 100%); width: 100%; height: 50%;">
+		<div style="background: url('header_photo.jpg'); background-repeat: no-repat; background-size: cover; background-attachment: fixed; width: 100%; height: 300px; display:flex;align-items:end;">
+			<canvas style="bottom: 0; background: rgb(55,86,10); background: linear-gradient(0deg, rgba(55,86,10,1) 0%, rgba(0,0,0,0) 100%); width: 100%; height: 50%;">
 			</canvas>
 		</div>
-		<div id="mappa" style="background-color: #37560a; width: 100%; height: 80%; display:flex; justify-content:center; align-items:center; display:flex;align-items:flex-end;">
-			<iframe frameborder="0" src="https://www.google.com/maps/d/embed?mid=1JVTOJW1iGJrz6DdjtF96aSQbYLOqyQJf" width="70%" height="560"></iframe>
+		<div id="mappa" style="background-color: #37560a; width: 100%; height: 700px; display:flex; justify-content:center; align-items:center; display:flex;align-items:center;">
+			<iframe frameborder="0" src="https://www.google.com/maps/d/embed?mid=1JVTOJW1iGJrz6DdjtF96aSQbYLOqyQJf" width="80%" height="560"></iframe>
 		</div>
-		<div id="facebook" style="background-color: #37560a; width: 100%; height: 80%; display:flex; justify-content:center; align-items:center; display:flex;align-items:flex-end;">
-			<div class="fb-page" data-href="https://it-it.facebook.com/groups/129021191166622" data-tabs="timeline" data-width="80" data-height="600" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
+		<div id="facebook" style="background-color: #37560a; width: 100%; height: 200px; display:flex; justify-content:center; display:flex;align-items:center;">
+			<figure style="text-align: center">
+				<a href="https://facebook.com/"><img style="cursor: pointer; width: 120px; hegith: 120px;" src="icons8/facebook-96.png"></a>
+				<figcaption style="font-size: 16px; color: white;">Mettici Like su Facebook</figcaption>
+			</figure>
 		</div>
-		<script>
-			function apriMenu() {
-				document.getElementById.("menu").classList.add = "menu-show";
-				document.getElementById.("menu_bg").classList.add = "menu-show";
-			}
-		</script>
+		<div id="instagram" style="background-color: #37560a; width: 100%; height: 200px; display:flex; justify-content:center; display:flex;align-items:center;">
+			<figure style="text-align: center">
+				<a href="https://instagram.com/"><img style="cursor: pointer; width: 120px; hegith: 120px;" src="icons8/instagram-old-96.png"></a>
+				<figcaption style="font-size: 16px; color: white;">Seguici su Instagram</figcaption>
+			</figure>
+		</div>
+		<div id="youtube" style="background-color: #37560a; width: 100%; height: 200px; display:flex; justify-content:center; display:flex;align-items:center;">
+			<figure style="text-align: center">
+				<a href="https://youtube.com/"><img style="cursor: pointer; width: 120px; hegith: 120px;" src="icons8/youtube-squared-96.png"></a>
+				<figcaption style="font-size: 16px; color: white;">Iscriviti al nostro canale</figcaption>
+			</figure>
+		</div>
+		<div id="condividi_facebook" style="background-color: #37560a; width: 100%; height: 50px; display:flex; justify-content:center; display:flex;align-items:center;">
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https://nataleincomunita.github.io" style="color: white;">Condividi questo sito su Facebook</a>
+		</div>
+		<div id="condividi_whatsapp" style="background-color: #37560a; width: 100%; height: 50px; display:flex; justify-content:center; display:flex;align-items:center;">
+			<a href="https://api.whatsapp.com/send?text=Natale%20in%20Comune%3F%20Meglio%20in%20Comunit%C3%A0!%0Ahttps%3A%2F%2Fnataleincomunita.github.io" style="color: white;">Condividi questo sito via WhatsApp</a>
+		</div>
+		<div id="scrivici" style="background-color: #37560a; width: 100%; height: 600px; display:flex; justify-content:center; display:flex;align-items:center;">
+			<form action="mailto:alex65ferrari@gmail.com" style="width: 80%;">
+				<h2 style="color: white;">Scrivici un Messaggio:</h2>
+				<p style="color: white;">Se devi fare una domanda oppure vuoi inviare qualcosa puoi utilizzare questo modulo per inviarci un E-mail.</p>
+				<br>
+				<p style="color: white;">Soggetto:</p>
+				<input style="width: 100%; border-style: none; height: 30px; border-radius: 10px;" type="text" name="subject">
+				<br>
+				<br>
+				<p style="color: white;">Testo del Messaggio:</p>
+				<textarea style="width: 100%; border-style: none; border-radius: 10px;" rows="5" name="body"></textarea>
+				<br>
+				<br>
+				<input style="width: 100%; border-style: none; height: 30px; border-radius: 10px; font-size: 20px;" type="submit" value="Invia">
+			</form>
+		</div>
+		<div style="background-color: #1D1D1D; width: 100%; height: 100px; display:flex; justify-content:center; display:flex;align-items:center;">
+			<p style="color: white; text-align: center;">
+			Le icone provengono da <a style="color: white;" target="_blank" href="https://icons8.com">Icons8.com</a>
+			<br>
+			Le foto sono fornite da <a style="color: white;" target="_blank" href="https://pixabay.com">Pixabay</a> e <a style="color: white;" href="https://unsplash.com/">Unsplash</a>
+			<br>
+			<a style="color: white; opacity: 0.3;" target="_blank" href="https://github.com/alex65ferrari">Sito creato da Alex Ferrari</a>
+			</p>
+		</div>
 	</body>
 </html>
