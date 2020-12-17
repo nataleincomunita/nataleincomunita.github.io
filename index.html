@@ -5,6 +5,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
 		<style>
+			/* Elementi */
 			body {
 				margin: 0px;
 				padding: 0px;
@@ -14,83 +15,119 @@
 			}
 			h1, h2, p, a, figcaption {
 				font-family: 'Cormorant Garamond', serif;
+				color: white;
+			}
+			/* Classi */
+			.icone-menu {
+				cursor: pointer;
+				width: 40px;
+				height: 40px;
+			}
+			.figure-caption {
+				font-size: 16px;
+				color: white;
+			}
+			.prima-immagine {
+				background: url('header_photo.jpg');
+				background-repeat: no-repat;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+			.contenitori {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				background-color: #37560a;
+				justify-content: center;
+			}
+			.titolo-pagina {
+				text-shadow: 0px -2px 8px #FF0000, 0px 2px 8px #FF0000;
+				color: white;
+				text-align: center;
+				width: 100%;
+			}
+			.icone-social {
+				cursor: pointer;
+				width: 120px;
+				hegith: 120px;
+			}
+			/* ID */
+			#menu {
+				display:flex;
+				align-items:center;
+				background-color: #37560a;
+				width: 100%;
+				height: 70px;
+				position: sticky;
+				top: 0;
+				border-bottom-style: solid;
+				border-color: white;
+				border-width: 2px;
 			}
 		</style>
 	</head>
 	<body>
-		<div style="display:flex;align-items:center; background-color: #37560a; width: 100%; height: 70px; position: sticky; top: 0; border-bottom-style: solid; border-color: white; border-width: 2px;">
+		<!-- menu di navigazione -->
+		<div id="menu">
 			<figure style="text-align: center">
-				<a href="#mappa"><img style="cursor: pointer; width: 40px; height: 40px;" src="icons8/waypoint-map-50.png"></a>
-				<figcaption style="font-size: 16px; color: white;">Mappa</figcaption>
+				<a href="#mappa"><img class="icone-menu" src="icons8/waypoint-map-50.png"></a>
+				<figcaption class="figure-caption">Mappa</figcaption>
 			</figure>
 			<figure style="text-align: center">
-				<a href="#facebook"><img style="cursor: pointer; width: 40px; height: 40px;" src="icons8/instagram-50.png"></a>
-				<figcaption style="font-size: 16px; color: white;">Social</figcaption>
+				<a href="#facebook"><img class="icone-menu" src="icons8/instagram-50.png"></a>
+				<figcaption class="figure-caption">Social</figcaption>
 			</figure>
 			<figure style="text-align: center">
-				<a href="#scrivici"><img style="cursor: pointer; width: 40px; height: 40px;" src="icons8/composing-mail-50.png"></a>
-				<figcaption style="font-size: 16px; color: white;">Scrivici</figcaption>
+				<a href="#scrivici"><img class="icone-menu" src="icons8/composing-mail-50.png"></a>
+				<figcaption class="figure-caption">Scrivici</figcaption>
 			</figure>
 		</div>
-		<div id="prima_immagine" style="background: url('header_photo.jpg'); background-repeat: no-repat; background-size: cover; background-attachment: fixed; width: 100%; height: 250px; display:flex;align-items:top;">
-			<h1 style="text-shadow: 0px -2px 8px #FF0000, 0px 2px 8px #FF0000; color: white; text-align: center; width: 100%;">Natale in comune? <br> Meglio in comunità! <br> <p style="color: white; font-size: 20px;" href="#mappa">Usa il menu sopra per spostarti</p></h1>
+		<!-- Immagine e titolo -->
+		<div id="prima_immagine" class="prima-immagine contenitori" style="height: 250px; align-items:top;">
+			<h1 class="titolo-pagina">Natale in comune? <br> Meglio in comunità! <br> <p style="font-size: 20px;">Usa il menu sopra per spostarti</p></h1>
 		</div>
-		<div style="background: url('header_photo.jpg'); background-repeat: no-repat; background-size: cover; background-attachment: fixed; width: 100%; height: 300px; display:flex;align-items:end;">
-			<canvas style="bottom: 0; background: rgb(55,86,10); background: linear-gradient(0deg, rgba(55,86,10,1) 0%, rgba(0,0,0,0) 100%); width: 100%; height: 50%;">
-			</canvas>
+		<div class="prima-immagine contenitori" style="height: 300px; align-items:end;">
+			<canvas style="background: rgb(55,86,10); background: linear-gradient(0deg, rgba(55,86,10,1) 0%, rgba(0,0,0,0) 100%); width: 100%; height: 50%;"></canvas>
 		</div>
-		<div id="mappa" style="background-color: #37560a; width: 100%; height: 700px; display:flex; justify-content:center; align-items:center; display:flex;align-items:center;">
+		<div id="mappa" class="contenitori" style="height: 700px; display:flex;">
 			<iframe frameborder="0" src="https://www.google.com/maps/d/embed?mid=1JVTOJW1iGJrz6DdjtF96aSQbYLOqyQJf" width="80%" height="560"></iframe>
 		</div>
-		<div id="facebook" style="background-color: #37560a; width: 100%; height: 200px; display:flex; justify-content:center; display:flex;align-items:center;">
+		<div id="facebook" class="contenitori" style="height: 200px;">
 			<figure style="text-align: center">
-				<a href="https://facebook.com/"><img style="cursor: pointer; width: 120px; hegith: 120px;" src="icons8/facebook-96.png"></a>
-				<figcaption style="font-size: 16px; color: white;">Mettici Like su Facebook</figcaption>
+				<a href="https://facebook.com/"><img class="icone-social" src="icons8/facebook-96.png"></a>
+				<figcaption class="figure-caption">Mettici Like su Facebook</figcaption>
 			</figure>
 		</div>
-		<div id="instagram" style="background-color: #37560a; width: 100%; height: 200px; display:flex; justify-content:center; display:flex;align-items:center;">
+		<div id="instagram" class="contenitori" style="height: 200px;">
 			<figure style="text-align: center">
-				<a href="https://instagram.com/"><img style="cursor: pointer; width: 120px; hegith: 120px;" src="icons8/instagram-old-96.png"></a>
-				<figcaption style="font-size: 16px; color: white;">Seguici su Instagram</figcaption>
+				<a href="https://instagram.com/"><img class="icone-social" src="icons8/instagram-old-96.png"></a>
+				<figcaption class="figure-caption">Seguici su Instagram</figcaption>
 			</figure>
 		</div>
-		<div id="youtube" style="background-color: #37560a; width: 100%; height: 200px; display:flex; justify-content:center; display:flex;align-items:center;">
+		<div id="youtube" class="contenitori" style="height: 200px;">
 			<figure style="text-align: center">
-				<a href="https://youtube.com/"><img style="cursor: pointer; width: 120px; hegith: 120px;" src="icons8/youtube-squared-96.png"></a>
-				<figcaption style="font-size: 16px; color: white;">Iscriviti al nostro canale</figcaption>
+				<a href="https://youtube.com/"><img class="icone-social" src="icons8/youtube-squared-96.png"></a>
+				<figcaption class="figure-caption">Iscriviti al nostro canale</figcaption>
 			</figure>
 		</div>
-		<div id="condividi_facebook" style="background-color: #37560a; width: 100%; height: 50px; display:flex; justify-content:center; display:flex;align-items:center;">
-			<a href="https://www.facebook.com/sharer/sharer.php?u=https://nataleincomunita.github.io" style="color: white;">Condividi questo sito su Facebook</a>
+		<div id="condividi_facebook" class="contenitori" style="height: 50px;">
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https://nataleincomunita.github.io">Condividi questo sito su Facebook</a>
 		</div>
-		<div id="condividi_whatsapp" style="background-color: #37560a; width: 100%; height: 50px; display:flex; justify-content:center; display:flex;align-items:center;">
-			<a href="https://api.whatsapp.com/send?text=Natale%20in%20Comune%3F%20Meglio%20in%20Comunit%C3%A0!%0Ahttps%3A%2F%2Fnataleincomunita.github.io" style="color: white;">Condividi questo sito via WhatsApp</a>
+		<div id="condividi_whatsapp" class="contenitori" style="height: 50px;">
+			<a href="https://api.whatsapp.com/send?text=Natale%20in%20Comune%3F%20Meglio%20in%20Comunit%C3%A0!%0Ahttps%3A%2F%2Fnataleincomunita.github.io">Condividi questo sito via WhatsApp</a>
 		</div>
-		<div id="scrivici" style="background-color: #37560a; width: 100%; height: 600px; display:flex; justify-content:center; display:flex;align-items:center;">
-			<form action="mailto:alex65ferrari@gmail.com" style="width: 80%;">
-				<h2 style="color: white;">Scrivici un Messaggio:</h2>
-				<p style="color: white;">Se devi fare una domanda oppure vuoi inviare qualcosa puoi utilizzare questo modulo per inviarci un E-mail.</p>
-				<br>
-				<p style="color: white;">Soggetto:</p>
-				<input style="width: 100%; border-style: none; height: 30px; border-radius: 10px;" type="text" name="subject">
-				<br>
-				<br>
-				<p style="color: white;">Testo del Messaggio:</p>
-				<textarea style="width: 100%; border-style: none; border-radius: 10px;" rows="5" name="body"></textarea>
-				<br>
-				<br>
-				<input style="width: 100%; border-style: none; height: 30px; border-radius: 10px; font-size: 20px;" type="submit" value="Invia">
-			</form>
+		<div id="scrivici" class="contenitori" style="height: 2000px;">
+			<br>
+			<br>
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSey4VjF0TqimmTHFGpfyBWJRJwC6AEk7e-CiI7JD4CTKCnWHw/viewform?embedded=true" width="80%" height="1800" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 		</div>
-		<div style="background-color: #1D1D1D; width: 100%; height: 120px; display:flex; justify-content:center; display:flex;align-items:center;">
-			<p style="color: white; text-align: center;">
-			Le icone provengono da <a style="color: white;" target="_blank" href="https://icons8.com">Icons8.com</a>
-			<br>
-			Le foto sono fornite da <a style="color: white;" target="_blank" href="https://pixabay.com">Pixabay</a> e <a style="color: white;" href="https://unsplash.com/">Unsplash</a>
-			<br>
-			<a style="color: white; opacity: 0.3;" target="_blank" href="https://github.com/alex65ferrari">Sito creato da Alex Ferrari</a>
-			<br>
-			<a style="color: white;" href="#prima_immagine">Torna in cima al sito</a>
+		<div class="contenitori" style="background-color: #1D1D1D; height: 120px;">
+			<p style="text-align: center;">
+				Le icone provengono da <a target="_blank" href="https://icons8.com">Icons8.com</a>
+				<br>
+				Le foto sono fornite da <a target="_blank" href="https://pixabay.com">Pixabay</a> e <a targer="_blank" href="https://unsplash.com/">Unsplash</a>
+				<br>
+				<a href="#prima_immagine">Torna in cima al sito</a>
 			</p>
 		</div>
 	</body>
